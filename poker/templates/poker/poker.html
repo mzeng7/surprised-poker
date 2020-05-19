@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Surprised Poker</title>
+{% endblock %}
+
+{% block body %}
+{% if user.is_authenticated %}
+<br>
+<h1>Welcome to Surprised Poker</h1>
+<p>To begin, either create a new table or join an existing table.</p>
+<button type="button" class="btn btn-success">New table</button>
+<hr>
+<h3>Existing tables</h3>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Table #0</h5>
+    <h6 class="card-subtitle mb-2 text-muted">No limit hold'em</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Stakes: $0.02/$0.05</h6> <!-- TODO: dynamicly load stakes -->
+    <h6 class="card-subtitle mb-2 text-muted">0 players connected</h6> <!-- TODO: dynamicly load players -->
+    <p class="card-text">This is the main development table. Adding new tables is a feature I haven't built yet.</p>
+    <a href="/poker/table0" class="btn btn-primary">View</a>
+    <button type="button" class="btn btn-secondary">Manage</button>
+  </div>
+</div>
+{% else %}
+<div class="jumbotron">
+  <h1 class="display-4">Welcome</h1>
+  <p class="lead">This is a project to build a website that lets users play Texas hold'em with their friends in a home-game-like setting.</p>
+  <hr class="my-4">
+  <p>The project is currently in development, and many features still need to be written and tested.</p>
+  <a class="btn btn-primary btn-lg" href="/poker/register/" role="button">Register</a>
+  <a class="btn btn-secondary btn-lg" href="/poker/login/" role="button">Login</a>
+</div>
+{% endif %}
+{% endblock %}
+

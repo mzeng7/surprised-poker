@@ -1,0 +1,39 @@
+.table-information {
+	text-align: center;
+}
+
+.outer-board {
+	/*background: url(http://placekitten.com/720/405/) no-repeat center center;
+    background-size: cover;*/
+	padding: 20px;
+	height: 500px;
+	border: 3px solid;
+	width: 1000px;
+	margin: auto;
+
+}
+
+.inner-board {
+	border: 3px dotted;
+	width: 400px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 120px;
+}
+
+.community-cards {
+	padding: 10px;
+}
+
+.pot-info {
+	text-align: center;
+}
+
+.action-menu {
+	border: 3px dotted;
+	width: 1000px;
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+}
